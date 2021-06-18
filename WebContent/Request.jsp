@@ -118,6 +118,7 @@
 </head>
 
 <body class="bk">
+
 <%
 	if(session.getAttribute("mobile")==null)
 	{
@@ -260,9 +261,8 @@ session.setAttribute("adv1", adv1);
     	</tr>
     	<tr>              
     			<td>
-    				<input type="text" name="fcity" value="<%=session.getAttribute("source")%>" required style="width:150px;text-alignment:center;" readonly/>
-    				<input type="text" name="fstate" required style="width:150px;" /><br>
-    				<p style="font-size:11.004px;  margin:3px 0px; color:gray;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCity&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspState</p><br>
+    				<input type="text" name="fcity" value="<%=session.getAttribute("source")%>" required style="width:300px;text-alignment:center;" readonly/>
+    				<p style="font-size:11.004px;  margin:3px 0px; color:gray;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspLocation</p><br>
     				<input type="text" name="fpincode" pattern="^[1-9][0-9]{5}$"  required style="width:120px;"/><br/>
     				<p style="font-size:11.004px;  margin:3px 0px; color:gray;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPincode/zipcode</p>
     			</td>
@@ -280,9 +280,8 @@ session.setAttribute("adv1", adv1);
     	</tr>
     	<tr>              
     			<td>
-    				<input type="text" name="tcity" value="<%=session.getAttribute("dest")%>" required readonly style="width:150px;text-alignment:center;" />
-    				<input type="text" name="tstate" required style="width:150px;" /><br>
-    				<p style="font-size:11.004px;  margin:3px 0px; color:gray;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCity&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspState</p><br>
+    				<input type="text" name="tcity" value="<%=session.getAttribute("dest")%>" required readonly style="width:300px;text-alignment:center;" />
+    				<p style="font-size:11.004px;  margin:3px 0px; color:gray;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspLocation</p><br>
     				<input type="text" name="tpincode" pattern="^[1-9][0-9]{5}$"  required style="width:120px;"/><br/>
     				<p style="font-size:11.004px;  margin:3px 0px; color:gray;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPincode/zipcode</p>
     			</td>

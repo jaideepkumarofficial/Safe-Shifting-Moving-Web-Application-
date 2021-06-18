@@ -100,12 +100,12 @@ button:hover {
    <table style="margin-left:3%;">
    	<tr>
    		<td style=" padding: 8px;"><img alt="" src="images/23.png" style="height:30px;width:20px;"></td>
-   		<td style=" padding: 8px;"><label style="color:gray;font-size:17px; ">&nbsp&nbsp<%= session.getAttribute("fadd1")%>&nbsp&nbsp<%= session.getAttribute("fadd2")%>&nbsp&nbsp<%= session.getAttribute("source")%> &nbsp&nbsp<%= session.getAttribute("fstate")%>&nbsp&nbsp<%= session.getAttribute("fpincode")%>.</label></td>
+   		<td style=" padding: 8px;"><label style="color:gray;font-size:17px; ">&nbsp&nbsp<%= session.getAttribute("fadd1")%>&nbsp&nbsp<%= session.getAttribute("fadd2")%>&nbsp&nbsp<%= session.getAttribute("source")%> &nbsp&nbsp<%= session.getAttribute("fpincode")%>.</label></td>
    </tr>
    
    <tr>
    		<td  style=" padding: 8px;"><img alt="" src="images/24.png" style="height:30px;width:20px;"></td>
-   		<td style=" padding: 8px;"><label style="color:gray; font-size:17px;">&nbsp&nbsp<%= session.getAttribute("tadd1")%>&nbsp&nbsp<%= session.getAttribute("tadd2")%>&nbsp&nbsp<%= session.getAttribute("dest")%> &nbsp&nbsp<%= session.getAttribute("tstate")%>&nbsp&nbsp<%= session.getAttribute("tpincode")%>.</label></td>
+   		<td style=" padding: 8px;"><label style="color:gray; font-size:17px;">&nbsp&nbsp<%= session.getAttribute("tadd1")%>&nbsp&nbsp<%= session.getAttribute("tadd2")%>&nbsp&nbsp<%= session.getAttribute("dest")%> &nbsp&nbsp<%= session.getAttribute("tpincode")%>.</label></td>
    </tr>
    </table>
    <hr style="margin-left:3%;margin-right:3%;">

@@ -137,20 +137,17 @@ li a {
 				</th>
 				<th style="text-align: left;padding: 8px;">From AddLine2
 				</th>
-				<th style="text-align: left;padding: 8px;">From City
+				<th style="text-align: left;padding: 8px;">From Location
 				</th>
-				<th style="text-align: left;padding: 8px;">From State
-				</th>
-				<th style="text-align: left;padding: 8px;">From pincode
+				<th style="text-align: left;padding: 8px;">From Pincode
 				</th>
 				<th style="text-align: left;padding: 8px;">To Address1
 				</th>
 				<th style="text-align: left;padding: 8px;">To Address2
 				</th>
-				<th style="text-align: left;padding: 8px;">To City
+				<th style="text-align: left;padding: 8px;">To Location
 				</th>
-				<th style="text-align: left;padding: 8px;">To State
-				</th>
+				
 				<th style="text-align: left;padding: 8px;">To Pincode
 				</th>
 				<th style="text-align: left;padding: 8px;">Instruction
@@ -185,12 +182,12 @@ li a {
     				<td style="text-align: left;padding: 8px;"><%=rs.getString("fadd1") %></td>
     				<td style="text-align: left;padding: 8px;"><%=rs.getString("fadd2") %></td>
     				<td style="text-align: left;padding: 8px;"><%=rs.getString("fcity") %></td>
-    				<td style="text-align: left;padding: 8px;"><%=rs.getString("fstate") %></td>
+    				
     				<td style="text-align: left;padding: 8px;"><%=rs.getString("fpincode") %></td>
     				<td style="text-align: left;padding: 8px;"><%=rs.getString("tadd1") %></td>
     				<td style="text-align: left;padding: 8px;"><%=rs.getString("tadd2") %></td>
     				<td style="text-align: left;padding: 8px;"><%=rs.getString("tcity") %></td>
-    				<td style="text-align: left;padding: 8px;"><%=rs.getString("tstate") %></td>
+    				
     				<td style="text-align: left;padding: 8px;"><%=rs.getString("tpincode") %></td>
     				<td style="text-align: left;padding: 8px;"><%=rs.getString("instruction") %></td>
     				<td style="text-align: left;padding: 8px;"><%=rs.getString("ttype") %></td>
