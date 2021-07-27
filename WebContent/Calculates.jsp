@@ -116,7 +116,7 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
   	<a href="Home.html" id="Home" style="font-size:15px;">Home</a>
   	<a href="Logout.jsp" id="About" style="font-size:15px;">Logout</a>
   	</div>
-  <form>
+  <form action="Calculates.jsp"  method="post">
   <div class="container1">
   <br>
     <h3 align="center" style="color:gray;">Checking Price</h3>
@@ -220,7 +220,7 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
     <button type="submit" class="btn">Check Price</button>
     </div>
    </form>
-  <form action="Request.jsp" method="get">
+  <form action="">
   <div class="container">
   <br>
     <p align="center" style="text-decoration: underline;color:gray; font-size:20px;letter-spacing:1px;line-height:0.01;">Details</p>
@@ -297,7 +297,7 @@ session.setAttribute("price",rs3.getString("price"));
 </table>
 <br>
 <a>Note : <a style="color:Red;letter-spacing:1px;">we have given sufficient km if km exceed then it will be charged Rs30/per km.</a></a><br><br>
- <button style="width:100px;height:40px;line-height:0.8;" type="submit" class="btn" >Proceed</button>
+ <button style="width:100px;height:40px;line-height:0.8;" type="submit" class="btn" onclick="form.action='Request.jsp';">Proceed</button>
 
 <%
 

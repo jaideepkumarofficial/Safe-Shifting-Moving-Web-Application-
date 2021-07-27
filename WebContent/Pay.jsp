@@ -10,15 +10,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%
-	if(session.getAttribute("mobile")==null)
-	{
-		response.sendRedirect("Login.jsp");
-	}
-response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
-%>
-<%
 
+<%
 Class.forName("com.mysql.cj.jdbc.Driver");
 
 
@@ -40,12 +33,12 @@ Class.forName("com.mysql.cj.jdbc.Driver");
 			 String fadd1 = (String)session.getAttribute("fadd1");
 			 String fadd2 = (String)session.getAttribute("fadd2");
 			 String fcity = (String)session.getAttribute("source");
-			 
+			 String fstate = (String)session.getAttribute("fstate");
 			 String fpincode = (String)session.getAttribute("fpincode");
 			 String tadd1 = (String)session.getAttribute("tadd1");
 			 String tadd2 = (String)session.getAttribute("tadd2");
 			 String tcity = (String)session.getAttribute("dest");
-			 
+			 String tstate = (String)session.getAttribute("tstate");
 			 String tpincode = (String)session.getAttribute("tpincode");
 			 String instruction = (String)session.getAttribute("ins");
 			 String ttype = (String)session.getAttribute("ttype");
@@ -67,7 +60,7 @@ Class.forName("com.mysql.cj.jdbc.Driver");
 				
 				String bk=String.valueOf(bk_id);
 				session.setAttribute("bk", bk);
-			 PreparedStatement ps1=con.prepareStatement("insert into booking values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"); 
+			 PreparedStatement ps1=con.prepareStatement("insert into booking values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"); 
 	            ps1.setInt(1, bk_id);
 	            ps1.setString(2, fname);
 	            ps1.setString(3, lname);
@@ -78,18 +71,18 @@ Class.forName("com.mysql.cj.jdbc.Driver");
 	            ps1.setString(8, fadd1);
 	            ps1.setString(9, fadd2);
 	            ps1.setString(10, fcity);
-	 
-	            ps1.setString(11, fpincode);
-	            ps1.setString(12, tadd1);
-	            ps1.setString(13, tadd2);
-	            ps1.setString(14, tcity);
-	            
-	            ps1.setString(15, tpincode);
-	            ps1.setString(16, instruction);
-	            ps1.setString(17, ttype);
-	            ps1.setString(18, td);
-	            ps1.setString(19, price);
-	            ps1.setString(20, adv1);
+	            ps1.setString(11, fstate);
+	            ps1.setString(12, fpincode);
+	            ps1.setString(13, tadd1);
+	            ps1.setString(14, tadd2);
+	            ps1.setString(15, tcity);
+	            ps1.setString(16, tstate);
+	            ps1.setString(17, tpincode);
+	            ps1.setString(18, instruction);
+	            ps1.setString(19, ttype);
+	            ps1.setString(20, td);
+	            ps1.setString(21, price);
+	            ps1.setString(22, adv1);
 	            
 	            int i=ps1.executeUpdate();  
 	    		if(i>0)  

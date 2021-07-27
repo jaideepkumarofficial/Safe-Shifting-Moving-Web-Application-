@@ -30,7 +30,6 @@
   </head>
 
 <body>
-<%session.invalidate(); %>
 <form  action="http://localhost:8080/SafeShifting/Login">
     <section class="u-clearfix u-image u-shading u-section-1" id="sec-85e9" data-image-width="2540" data-image-height="1390">
       <div class="u-clearfix u-sheet u-sheet-1">

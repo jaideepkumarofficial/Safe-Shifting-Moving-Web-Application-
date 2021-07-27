@@ -118,16 +118,15 @@
 </head>
 
 <body class="bk">
-
 <%
 	if(session.getAttribute("mobile")==null)
 	{
 		response.sendRedirect("Login.jsp");
 	}
-
+response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 %>
 <div  style="margin-top:80px;">
- <form  method="get" action="New.jsp">
+ <form  method="post" action="New.jsp">
     <div id="mySidenav" class="sidenav">
   	<a href="Home.html" id="Home" style="font-size:15px;">Home</a>
   	<a href="Logout.jsp" id="About" style="font-size:15px;">Logout</a>
@@ -179,26 +178,17 @@
 <table style="margin-left:18%;">
 <tr>
 <%
-
 String a=(String)session.getAttribute("price");
-float adv=555.5f;
-if(a==null)
-	
-{
-	 out.println("alert('You have already logged out');");
-	
-}else
-{
+
 int ad=Integer.parseInt(a);
- adv=ad*0.4f;
+float adv=ad*0.4f;
 //F is the suffix for float  
 String adv1=String.valueOf(adv);
 session.setAttribute("adv1", adv1);
-}
 %>
 <td>Advance Payment :
 </td>
-<td><input type="text" name="adv" value="<%=adv%>" style="border: 1px solid AliceBlue;background-color:AliceBlue;color:gray;height:30px;width:100px;" readonly>
+<td><input type="text" name="adv" value="<%=adv1%>" style="border: 1px solid AliceBlue;background-color:AliceBlue;color:gray;height:30px;width:100px;" readonly>
 <%
 
 
@@ -261,8 +251,9 @@ session.setAttribute("adv1", adv1);
     	</tr>
     	<tr>              
     			<td>
-    				<input type="text" name="fcity" value="<%=session.getAttribute("source")%>" required style="width:300px;text-alignment:center;" readonly/>
-    				<p style="font-size:11.004px;  margin:3px 0px; color:gray;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspLocation</p><br>
+    				<input type="text" name="fcity" value="<%=session.getAttribute("source")%>" required style="width:150px;text-alignment:center;" readonly/>
+    				<input type="text" name="fstate" required style="width:150px;" /><br>
+    				<p style="font-size:11.004px;  margin:3px 0px; color:gray;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCity&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspState</p><br>
     				<input type="text" name="fpincode" pattern="^[1-9][0-9]{5}$"  required style="width:120px;"/><br/>
     				<p style="font-size:11.004px;  margin:3px 0px; color:gray;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPincode/zipcode</p>
     			</td>
@@ -280,8 +271,9 @@ session.setAttribute("adv1", adv1);
     	</tr>
     	<tr>              
     			<td>
-    				<input type="text" name="tcity" value="<%=session.getAttribute("dest")%>" required readonly style="width:300px;text-alignment:center;" />
-    				<p style="font-size:11.004px;  margin:3px 0px; color:gray;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspLocation</p><br>
+    				<input type="text" name="tcity" value="<%=session.getAttribute("dest")%>" required readonly style="width:150px;text-alignment:center;" />
+    				<input type="text" name="tstate" required style="width:150px;" /><br>
+    				<p style="font-size:11.004px;  margin:3px 0px; color:gray;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCity&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspState</p><br>
     				<input type="text" name="tpincode" pattern="^[1-9][0-9]{5}$"  required style="width:120px;"/><br/>
     				<p style="font-size:11.004px;  margin:3px 0px; color:gray;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPincode/zipcode</p>
     			</td>

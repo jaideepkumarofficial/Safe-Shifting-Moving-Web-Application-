@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    
 <!DOCTYPE html>
 <html>
 <head>
@@ -84,12 +83,17 @@ button:hover {
 </style>
 </head>
 <body>
-
-<form >
-
+<%
+	if(session.getAttribute("mobile")==null)
+	{
+		response.sendRedirect("Login.jsp");
+	}
+response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+%>
+<form action="">
  <div id="mySidenav" class="sidenav">
   	<a href="Home.html" id="Home" style="font-size:15px;">Home</a>
-  	<a href="lol.jsp" id="About" style="font-size:15px;">Logout</a>
+  	<a href="Logout.jsp" id="About" style="font-size:15px;">Logout</a>
   	</div>
 <div class="hero-text">
    <h1 id="Safe" style="line-height:1.4;">Safe-Shifting</h1>
@@ -100,12 +104,12 @@ button:hover {
    <table style="margin-left:3%;">
    	<tr>
    		<td style=" padding: 8px;"><img alt="" src="images/23.png" style="height:30px;width:20px;"></td>
-   		<td style=" padding: 8px;"><label style="color:gray;font-size:17px; ">&nbsp&nbsp<%= session.getAttribute("fadd1")%>&nbsp&nbsp<%= session.getAttribute("fadd2")%>&nbsp&nbsp<%= session.getAttribute("source")%> &nbsp&nbsp<%= session.getAttribute("fpincode")%>.</label></td>
+   		<td style=" padding: 8px;"><label style="color:gray;font-size:17px; ">&nbsp&nbsp<%= session.getAttribute("fadd1")%>&nbsp&nbsp<%= session.getAttribute("fadd2")%>&nbsp&nbsp<%= session.getAttribute("source")%> &nbsp&nbsp<%= session.getAttribute("fstate")%>&nbsp&nbsp<%= session.getAttribute("fpincode")%>.</label></td>
    </tr>
    
    <tr>
    		<td  style=" padding: 8px;"><img alt="" src="images/24.png" style="height:30px;width:20px;"></td>
-   		<td style=" padding: 8px;"><label style="color:gray; font-size:17px;">&nbsp&nbsp<%= session.getAttribute("tadd1")%>&nbsp&nbsp<%= session.getAttribute("tadd2")%>&nbsp&nbsp<%= session.getAttribute("dest")%> &nbsp&nbsp<%= session.getAttribute("tpincode")%>.</label></td>
+   		<td style=" padding: 8px;"><label style="color:gray; font-size:17px;">&nbsp&nbsp<%= session.getAttribute("tadd1")%>&nbsp&nbsp<%= session.getAttribute("tadd2")%>&nbsp&nbsp<%= session.getAttribute("dest")%> &nbsp&nbsp<%= session.getAttribute("tstate")%>&nbsp&nbsp<%= session.getAttribute("tpincode")%>.</label></td>
    </tr>
    </table>
    <hr style="margin-left:3%;margin-right:3%;">
@@ -147,26 +151,12 @@ button:hover {
 	<tr><td><label style="font-size:18px; color:SlateGrey; ">Advance Paid :</label></td>
 	<td style="text-align:right;"><label style="color:slateGrey; font-size:18px; "><%= session.getAttribute("adv1")%></label></td>
 	</tr>
-	
 	<%
-	if(session.getAttribute("mobile")==null)
-	{
-		response.sendRedirect("Login.jsp");
-	}
-response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 	String a=(String)session.getAttribute("price");
 	String b=(String)session.getAttribute("adv1");
-	float du=555.5f;
-	if(a==null)
-	{
-		 out.println("alert('You have already logged out');");
-	}
-	else
-		{
 	int p=Integer.parseInt(a);
 	Float ad=Float.parseFloat(b);
-	 du = p-ad;
-	}
+	float du = p-ad;
 	
 	%>
 	<tr><td><label style="font-size:18px; color:SlateGrey; ">Dues Amount :</label></td>

@@ -24,7 +24,6 @@
 	{
 		response.sendRedirect("Login.jsp");
 	}
-response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 %>
 <form method="post" action="Pay.jsp">
 <div class="wrapper">
@@ -64,6 +63,7 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
         Pay
         </button> 
         
+       
     </div>
   </div>
 </div>
